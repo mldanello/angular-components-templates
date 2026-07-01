@@ -18,7 +18,6 @@ export class CatalogComponent {
   constructor(private cartService: CartService) { }
 
   addToCart(product: IProduct) {
-    //this.availableInventory.update((p) => p - 1);
     this.cartService.addToCart(product);
   }
   addProduct() {
