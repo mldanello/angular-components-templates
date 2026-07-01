@@ -10,7 +10,8 @@ import { CategoryToPartTypePipe } from '../category-to-part-type-pipe';
   styleUrl: './product-details.component.css'
 })
 export class ProductDetailsComponent {
-  product = input<any>();
+  product = input.required<IProduct>();
+
   availableInventory = signal(5);
   inventoryMap = {
     '=0': 'Out of stock!',
