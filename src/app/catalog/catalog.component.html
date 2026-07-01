@@ -12,9 +12,7 @@
     first=$first, last=$last) {
   <li [class.alt]="odd" [class.top]="first">
     <div>Product {{ idx + 1 }} of {{ count }}</div>
-    <bot-product-details [product]="product">
-      <button class="cta" (click)="addToCart(product)">Buy</button>
-    </bot-product-details>
+    <bot-product-details mode="shop" (addToCart)="addToCart($event)" [product]="product" />
   </li>
   }
 </ul>
