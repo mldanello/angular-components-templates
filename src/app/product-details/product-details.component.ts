@@ -35,6 +35,10 @@ export class ProductDetailsComponent {
     this.removeFromCart.emit(this.product());
   }
 
+  handleSliderChange(newValue: number) {
+    console.log('New Slider value:', newValue);
+  }
+
   getImageUrl(product: IProduct) {
     return '/images/robot-parts/' + product.imageName;
   }
